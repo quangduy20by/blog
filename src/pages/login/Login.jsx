@@ -18,7 +18,7 @@ const apidt = 'https://61a9984633e9df0017ea3e6d.mockapi.io/api/v1/login'
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
         const changeUsername = (e) => {
-          const { value } = e ?.target;
+          const {value} = e?.target;
           setUserName(value);
         };
       
