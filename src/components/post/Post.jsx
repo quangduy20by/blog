@@ -11,7 +11,7 @@ export default function Post(props) {
                     <span className="postCat">ABC</span>
                     <span className="postCat">ABC</span>
                 </div>
-                <Link to={{pathname: '/post', search: `?title=${props.title}&${props.content}`}} >
+                <Link to={{pathname: '/post', search: `?title=${props.title}&content=${props.content}&id=${props.id}`}} >
                 <span className="postTitle">{props.title}</span>
                 </Link>
                 <hr/>

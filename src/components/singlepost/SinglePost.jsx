@@ -1,18 +1,23 @@
 import "./singlePost.css";
 import React from "react";
 
-const SinglePost = () => {
-  const [disable, setDisable] = React.useState(true);
+const SinglePost = (props) => {
+    const {title, content, handleSubmit} = props;
   const [value, setValue] = React.useState(
-    "title title title title title title title title title title title "
+      content
   );
+    const [disable, setDisable] = React.useState(true);
+    const handleSend = (value) => {
+        handleSubmit(value);
+        setDisable(true);
+    }
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
         <img src="./image/img7.jpg" alt="" className="singlePostImg" />
       </div>
       <h1 className="singlePostTitle">
-        Lorem ipsum dolor sit aqua
+          {title}
         <div className="singlePostEdit">
           {disable ? (
             <i
@@ -22,7 +27,7 @@ const SinglePost = () => {
           ) : (
             <i
               className="singlePostIcon far fa-save"
-              onClick={() => setDisable(true)}
+              onClick={() =>handleSend(value)}
             />
           )}
 

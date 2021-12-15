@@ -19,7 +19,7 @@ const Posts = () => {
         <div className="posts">
             {articles.map((article) => {
                 return (
-                    <Post title={article.title} content={article.content}/>    
+                    <Post title={article.title} content={article.content} id={article.id}/>
                 )
             })}
         </div>
